@@ -1,3 +1,4 @@
+# jwt_demo
 ## 代码验证——签发和验证JWT
 - 在应用里实施使用基于JWT这种Token的身份验证方法，你可以先去找一个签发与验证JWT的功能包。无论你的后端应用使用的是什么样的程序语言，系统，或者框架，你应该都可以找到提供类似功能的包。
 - 这里采用Node.js来进行代码验证。
@@ -14,17 +15,17 @@ npm init -y
 ```
 - 效果图如下:
 
-![init](https://img-blog.csdn.net/20180905152038642?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1hYSjE5OTUwOTE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![init][1]
 
 - 安装签发与验证JWT的功能包，这里使用的是[jsonwebtoken](https://github.com/auth0/node-jsonwebtoken)，在项目里面安装这个包。
 
 - 效果图如下:
 
-![jsonwebtoken_install](https://img-blog.csdn.net/20180905153205489?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1hYSjE5OTUwOTE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![jsonwebtoken_install][2]
 
 - `package.json`效果图:
 
-![jsonwebtoken_package](https://img-blog.csdn.net/20180905153321658?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1hYSjE5OTUwOTE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![jsonwebtoken_package][3]
 
 ------
 
@@ -126,7 +127,7 @@ C:\projects\testWorkspace\jwt_demo\config>openssl rsa -in private.key -pubout -o
 ```
 - 效果图如下:
 
-![config](https://img-blog.csdn.net/20180905172951676?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1hYSjE5OTUwOTE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![config][4]
 
 ------
 
@@ -141,7 +142,7 @@ const privateKey = fs.readFileSync('./config/private.key')
 
 - 效果图:
 
-![RS256](https://img-blog.csdn.net/2018090517344528?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1hYSjE5OTUwOTE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![RS256][5]
  
 - 签发仍然使用`jwt.sign`方法，只不过在选项参数里特别说明一下使用的算法是RS256:
 ```
@@ -160,6 +161,14 @@ jwt.verify(tokenRS256, publickey, (error, decoded) => {
 ```
 - 效果图:
 
-![RS256_verify](https://img-blog.csdn.net/20180905174437888?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1hYSjE5OTUwOTE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![RS256_verify][6]
 
 ------
+
+
+  [1]: ./images/init.png "init.png"
+  [2]: ./images/jsonwebtoken_install.png "jsonwebtoken_install.png"
+  [3]: ./images/jsonwebtoken_package.png "jsonwebtoken_package.png"
+  [4]: ./images/config.png "config.png"
+  [5]: ./images/RS256.png "RS256.png"
+  [6]: ./images/RS256_verify.png "RS256_verify.png"
