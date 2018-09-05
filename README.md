@@ -165,6 +165,8 @@ jwt.verify(tokenRS256, publickey, (error, decoded) => {
 
 ------
 
+- 更多详细的内容可以查看JackDan的[Blog][7]。
+
 
   [1]: ./images/init.png "init.png"
   [2]: ./images/jsonwebtoken_install.png "jsonwebtoken_install.png"
@@ -172,3 +174,4 @@ jwt.verify(tokenRS256, publickey, (error, decoded) => {
   [4]: ./images/config.png "config.png"
   [5]: ./images/RS256.png "RS256.png"
   [6]: ./images/RS256_verify.png "RS256_verify.png"
+  [7]: https://blog.csdn.net/XXJ19950917/article/details/82421194
